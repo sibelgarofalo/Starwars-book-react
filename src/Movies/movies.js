@@ -1,4 +1,7 @@
 import React from "react";
+import Movie from './movie';
+
+import './movies.css';
 
 class Movies extends React.Component {
 
@@ -20,14 +23,12 @@ class Movies extends React.Component {
 
     render() {
         return (
-            <div>
-                <ul>
-                    {
-                        this.state.movies.map(movie => {
-                            return (<li key={movie.title}>{movie.title}</li>)
-                        })
-                    }
-                </ul>
+            <div className="movies">
+                {
+                    this.state.movies.map(movie => {
+                        return (<Movie key={movie.title} movie={movie} />)
+                    })
+                }
             </div>
         )
     }
