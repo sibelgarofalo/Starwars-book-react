@@ -1,4 +1,6 @@
 import React from "react";
+import Pilot from "./pilot";
+import './pilots.css';
 
 class Pilots extends React.Component {
 
@@ -9,17 +11,21 @@ class Pilots extends React.Component {
         }
     }
 
-    componentDidMount() {
-        // call the api
-       
+    componentDidUpdate(previousProps) {
+        if (previousProps.pilots !== this.props.pilots) {
+            // fetch all starships
+            Promise
+                .all(this.props.pilots.map(url => fetch(url).then(response => response.json())))
+                .then(response => this.setState({ pilots: response }));
+        }
     }
 
     render() {
         return (
-            <div>
-                <ul>
-                    
-                </ul>
+            <div className="pilots">
+                {
+                    this.state.pilots.map(pilot => <Pilot key={pilot.name} pilot={pilot} />)
+                }
             </div>
         )
     }

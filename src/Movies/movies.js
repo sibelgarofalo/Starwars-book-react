@@ -24,9 +24,10 @@ class Movies extends React.Component {
     render() {
         return (
             <div className="movies">
+                <h1>Movies</h1>
                 {
                     this.state.movies.map(movie => {
-                        return (<Movie key={movie.title} movie={movie} />)
+                        return (<Movie key={movie.title} movie={movie} loadStarships={this.props.loadStarships} />)
                     })
                 }
             </div>

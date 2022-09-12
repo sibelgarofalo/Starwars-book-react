@@ -1,0 +1,26 @@
+.starships {
+    width: 400px;
+    background-color: black;
+    color: yellow;
+    height: 100%;
+    border-right: 3px solid yellow;
+    overflow-y: scroll;
+}
+
+.starships h1 {
+    padding: 0 24px;
+}
+
+.starships .starship {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 24px;
+    font-size: 24px;
+}
+
+.starships .starship .starship-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+}

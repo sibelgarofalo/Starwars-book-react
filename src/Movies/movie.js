@@ -15,6 +15,9 @@ class Movie extends React.Component {
             isVisible: !this.state.isVisible
         })
     }
+    loadStarships = () => {
+        this.props.loadStarships(this.props.movie.starships)
+    }
 
     render() {
         return (
@@ -30,7 +33,7 @@ class Movie extends React.Component {
                 </div>
                 <div className="buttons">
                     <button onClick={this.showHideMovie}>{this.state.isVisible ? 'Close' : 'Details'}</button>
-                    <button>Starships</button>
+                    <button onClick={this.loadStarships}>Starships</button>
                 </div>
             </div>
         )

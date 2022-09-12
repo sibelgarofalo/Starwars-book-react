@@ -2,4 +2,23 @@
     padding: 24px;
     height: calc(100vh - 48px);
     background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+button {
+    width: 100px;
+    height: 32px;
+    background-color: yellow;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: gray;
 }
