@@ -1,9 +1,14 @@
 .container {
     padding: 24px;
     height: calc(100vh - 48px);
-    background-color: black;
     display: flex;
     flex-direction: row;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2560px-Star_Wars_Logo.svg.png');
 }
 
 label {
